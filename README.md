@@ -1,15 +1,100 @@
 # SentiCook
-## Contents
-# Software and Platform
-We used Google Colab to create a shareable python file. We used the vaderSentiment, pandas, numpy, and scikit-learn packages for our sentiment analysis and data processing. We used both Windows and Mac as platforms.
-# Documentation
-In our GitHub Repository labeled 'SentiCook' we have a README.md to describe the structure and function of our model, a LICENSE.md file, and a SCRIPTS folder as well as a DATA folder and an OUTPUT folder.
 
-In the SCRIPTS folder we have 1_cleaning for preprocessing scripts, 2_exploratory_plots that includes the code that performs the sentiment analysis and sets the bins for the review data, and 3_model for the scripts that allow for data analysis and contributions to our OUTPUTS folder.
+## Contents of the Repository
 
-In the DATA folder we have just our Recipe Reviews Dataset labeled "Recipe Reviews and User Feedback Dataset.csv" in the original_data folder. This dataset was cleaned and then processed into the final_data folder as "cleaned_recipe_reviews.csv"
+This repository contains scripts for sentiment analysis of recipe reviews using VADER sentiment analysis and machine learning models to examine the relationship between review text sentiment, star ratings, and upvotes. 
 
-In the OUTPUTS folder we have a folder for exploratory plots and then a folder for model visualizations. The exploratory plots are: f_distribution of star bins.jpg, f_distribution of stars (original scale).jpg, f_distribution of upvotes.jpg, t_categorical summaries.jpg, t_descriptive statistics.jpg, t_helpful rate summary.jpg, t_sentiment bin distribution.jpg, t_star bin distribution.jpg, t_star count and percentages.jpg, t_thumbs up:down summary.jpg, t_total, and net thumb votes.jpg. For our model visualizations we have: 
+## Software and Platform
 
+**Software:** Google Colab and Jupyter Notebooks
 
-Section 3: Instructions for reproducing your results. In this section, you should give explicit step-by-step instructions to reproduce the Results of your study. These instructions should be written in straightforward plain English, but they must be concise, but detailed and precise enough, to make it possible for an interested user to reproduce your results without much difficulty. N.B. This section will be crucial for the CS1 assignment, where you'll be required to reproduce the results of other groups. Therefore, make sure to explain this section thoroughly.
+**Add-on packages:**
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
+- scipy
+- vaderSentiment
+- nltk
+
+**Platform:** Windows and Mac
+
+## Map of the Documentation
+
+```
+SentiCook/
+├── DATA/
+│   ├── original_data/
+│   │   └── Recipe Reviews and User Feedback Dataset.csv
+│   ├── final_data/
+│   │   └── cleaned_recipe_reviews.csv
+│   └── DataAppendix.pdf
+├── SCRIPTS/
+│   ├── 1_cleaning.ipynb
+│   ├── 2_exploratory_plots.ipynb
+│   └── 3_model.ipynb
+├── OUTPUT/
+│   ├── exploratory/
+│   │   ├── f_distribution of star bins.jpg
+│   │   ├── f_distribution of stars (original scale).jpg
+│   │   ├── f_distribution of upvotes.jpg
+│   │   ├── t_categorical summaries.jpg
+│   │   ├── t_descriptive statistics.jpg
+│   │   ├── t_helpful rate summary.jpg
+│   │   ├── t_sentiment bin distribution.jpg
+│   │   ├── t_star bin distribution.jpg
+│   │   ├── t_star count and percentages.jpg
+│   │   ├── t_thumbs up:down summary.jpg
+│   │   └── t_total and net thumb votes.jpg
+│   └── model visualizations/
+│       ├── f_distribution of thumbs up count-alignment.jpg
+│       ├── f_mean thumbs up count-alignment.jpg
+│       ├── f_model1 ROC.jpg
+│       ├── f_model1 confusion matrix.jpg
+│       ├── f_model2 ROC.jpg
+│       ├── f_model2 classification report.jpg
+│       ├── f_model2 confusion matrix.jpg
+│       ├── f_model3 ROC.jpg
+│       ├── f_model3 confusion matrix.jpg
+│       ├── t_AUC values for each class.jpg
+│       ├── t_model1 classification report.jpg
+│       ├── t_model3 classification report.jpg
+│       ├── t_sentiment vs star bin.jpg
+│       ├── t_summary of thumbs up for alignment.jpg
+│       └── t_upvotes summary.jpg
+├── LICENSE
+└── README.md
+```
+
+## Instructions for Reproducing the Results
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/srujanay18/SentiCook.git
+   cd SentiCook
+   ```
+
+2. **Install required packages:**
+   ```bash
+   pip install pandas numpy matplotlib seaborn scikit-learn scipy vaderSentiment nltk
+   ```
+
+3. **Run the notebooks in order:**
+
+   **Step 1: Data Cleaning**
+   - Open `SCRIPTS/1_cleaning.ipynb` in Jupyter Notebook or upload to Google Colab
+   - Execute all cells in order
+   - This will clean the raw dataset and output `DATA/final_data/cleaned_recipe_reviews.csv`
+
+   **Step 2: Exploratory Analysis**
+   - Open `SCRIPTS/2_exploratory_plots.ipynb` in Jupyter Notebook or upload to Google Colab
+   - Execute all cells in order
+   - This will generate descriptive statistics and visualizations in `OUTPUT/exploratory/`
+
+   **Step 3: Machine Learning Models**
+   - Open `SCRIPTS/3_model.ipynb` in Jupyter Notebook or upload to Google Colab
+   - Execute all cells in order
+   - This will train sentiment analysis models and generate performance visualizations in `OUTPUT/model visualizations/`
+
+**Note:** If using Google Colab, upload the dataset file `Recipe Reviews and User Feedback Dataset.csv` to the `/content/` directory before running the notebooks.
